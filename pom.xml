@@ -23,6 +23,18 @@
           </includes>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version> <!-- upgrade from 3.1 -->
+        <configuration>
+          <release>17</release>
+          <annotationProcessorPaths>
+            <!-- explicitly empty to prevent lombok processor from running -->
+          </annotationProcessorPaths>
+        </configuration>
+      </plugin>
+
     </plugins>
   </build>
 
@@ -74,23 +86,23 @@
       <version>7.15.0</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-    <dependency>
-      <groupId>com.aventstack</groupId>
-      <artifactId>extentreports</artifactId>
-      <version>5.0.9</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
-    <dependency>
-      <groupId>tech.grasshopper</groupId>
-      <artifactId>extentreports-cucumber7-adapter</artifactId>
-      <version>1.10.0</version>
-      <exclusions>
-        <exclusion>
-          <groupId>org.projectlombok</groupId>
-          <artifactId>lombok</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>com.aventstack</groupId>-->
+<!--      <artifactId>extentreports</artifactId>-->
+<!--      <version>5.0.9</version>-->
+<!--    </dependency>-->
+<!--    &lt;!&ndash; https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>tech.grasshopper</groupId>-->
+<!--      <artifactId>extentreports-cucumber7-adapter</artifactId>-->
+<!--      <version>1.10.0</version>-->
+<!--      <exclusions>-->
+<!--        <exclusion>-->
+<!--          <groupId>org.projectlombok</groupId>-->
+<!--          <artifactId>lombok</artifactId>-->
+<!--        </exclusion>-->
+<!--      </exclusions>-->
+<!--    </dependency>-->
 
   </dependencies>
 
