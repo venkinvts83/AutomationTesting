@@ -8,7 +8,7 @@ import org.testng.annotations.DataProvider;
 @CucumberOptions (features = "src/test/resources/",glue = {"com.venkat.stepDefinitions"},monochrome =true, plugin = {
         "pretty",
         "json:target/cucumber.json",
-        "html:target/cucumber-reports"
+        "html:target/cucumber-reports.html"
 
 })
 public class TestRunner extends AbstractTestNGCucumberTests {

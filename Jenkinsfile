@@ -33,8 +33,8 @@ pipeline
 
             // Publish Cucumber HTML report
             publishHTML(target: [
-                reportDir: 'target/cucumber-reports',
-                reportFiles: 'cucumber.html',
+                reportDir: 'target',
+                reportFiles: 'cucumber-reports.html',
                 reportName: 'Cucumber HTML Report'
             ])
 
